@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+
 import os
 import requests
 from PIL import Image
@@ -32,7 +33,7 @@ def setup_logging(log_dir='logs'):
 
 def download_and_stitch_images(base_url, image_pattern, max_rows, max_cols, save_directory='/home/hongdayang/work/dw_img/images', stitched_image_name='stitched_image.png'):
     try:
-        # 设置日志
+        # 设置日志目录
         log_dir = '/home/hongdayang/work/Download_Pictures/logs'
         log_path = setup_logging(log_dir)
 
@@ -97,4 +98,3 @@ max_rows = 10  # 设置尝试的最大行数
 max_cols = 10  # 设置尝试的最大列数
 
 download_and_stitch_images(base_url, image_pattern, max_rows, max_cols)
-
